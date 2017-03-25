@@ -1,0 +1,28 @@
+{
+  "name": "react-native-call-events",
+  "version": "0.0.7",
+  "description": "React Native component to get call backs for phone events into your application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HS2-SOLUTIONS/react-native-call-events"
+  },
+  "author": "HS2 Solutions / Jason Burich",
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/HS2-SOLUTIONS/react-native-call-events/blob/master/LICENSE"
+  },
+  "homepage": "https://github.com/HS2-SOLUTIONS/react-native-call-events#readme",
+  "keywords": [
+    "react-native",
+    "react",
+    "native",
+    "call"
+  ],
+  "bugs": {
+    "url": "https://github.com/HS2-SOLUTIONS/react-native-call-events/issues"
+  }
+}
