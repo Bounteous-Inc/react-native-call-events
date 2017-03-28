@@ -1,15 +1,23 @@
 import { NativeModules } from 'react-native';
-import { NativeAppEventEmitter } from 'react-native';
+import { NativeAppEventEmitter, DeviceEventEmitter } from 'react-native';
 
 const { ReactNativeCallEvents } = NativeModules;
 
-const RNCallEvents = {}
+const RNCallEvents = {};
 
-RNCallEvents.init = ( returnOnCall, returnOnEnd ) => {
-  return ReactNativeCallEvents.init(returnOnCall, returnOnEnd);
-}
-
-const eventsMap = {};
+RNCallEvents.init = config => {
+  if ( config && config.dispatch && typeof config.dispatch === 'function') {
+    DeviceEventEmitter.addListener('callStatusUpdate', event => {
+      config.dispatch({
+        type: event.state,
+        payload: {
+          phonenumber: event.phonenumber
+        }
+      })
+    });
+  }
+  return ReactNativeCallEvents.init( (config && config.returnOnCall) || false, (config && config.returnOnEnd) || false);
+};
 
 export default RNCallEvents;
 

@@ -1,10 +1,10 @@
 {
   "name": "react-native-call-events",
-  "version": "0.0.7",
+  "version": "0.1.0",
   "description": "React Native component to get call backs for phone events into your application",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -24,5 +24,17 @@
   ],
   "bugs": {
     "url": "https://github.com/HS2-SOLUTIONS/react-native-call-events/issues"
+  },
+  "devDependencies": {
+    "babel-jest": "^19.0.0",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-react": "^6.23.0",
+    "babel-preset-react-native": "^1.9.1",
+    "jest": "^19.0.2",
+    "react": "^15.4.2",
+    "react-native": "^0.42.3"
+  },
+  "jest": {
+    "preset": "react-native"
   }
 }

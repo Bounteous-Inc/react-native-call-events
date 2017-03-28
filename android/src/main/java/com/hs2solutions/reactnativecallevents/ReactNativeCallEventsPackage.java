@@ -1,8 +1,6 @@
 package com.hs2solutions.reactnativecallevents;
 
 
-import android.app.Application;
-
 import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.JavaScriptModule;
 import com.facebook.react.bridge.NativeModule;
@@ -17,10 +15,10 @@ import java.util.List;
  * Created by jburich on 3/25/17.
  */
 
-public class ReactdNativeCallEventsPackage implements ReactPackage {
+public class ReactNativeCallEventsPackage implements ReactPackage {
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
-        return Arrays.<NativeModule>asList(new ReactdNativeCallEventsModule(reactContext));
+        return Arrays.<NativeModule>asList(new ReactNativeCallEventsModule(reactContext));
     }
 
     @Override

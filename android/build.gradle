@@ -21,6 +21,7 @@ android {
         ndk {
             abiFilters "armeabi-v7a", "x86"
         }
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     lintOptions {
        warning 'InvalidPackage'
@@ -31,7 +32,16 @@ repositories {
     mavenCentral()
 }
 
+
+// don't upgrade until 1.7, https://github.com/powermock/powermock/issues/717
+def powerMockVersion =  '1.6.2'
 dependencies {
     compile 'com.facebook.react:react-native:+'
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.mockito:mockito-core:1.10.19'
+    testCompile ("org.powermock:powermock-api-mockito:$powerMockVersion") {
+        exclude group: 'org.mockito'
+    }
+    testCompile "org.powermock:powermock-module-junit4:$powerMockVersion"
 }
   
